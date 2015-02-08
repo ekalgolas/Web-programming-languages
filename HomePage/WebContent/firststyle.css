@@ -1,3 +1,4 @@
+ /* 1. General styles which apply to elements */
 html * {
 	margin: 0;
 	padding: 0;
@@ -23,16 +24,9 @@ a {
 	text-decoration: none;
 }
 
-.articles {
-	width: 90%;
-	max-width: 768px;
-	margin: 0 auto;
-}
-
-.articles #nested, .articles dd {
-	margin-left: 5em;
-}
-
+/* Specific styles which apply to elements */
+ 
+/* 2. Class based style selector 1 which applies to the header */
 .Header {
 	position: fixed;
 	top: 0;
@@ -44,12 +38,7 @@ a {
 	z-index: 2;
 }
 
-@media only screen and (min-width: 768px) {
-	.Header {
-		height: 70px;
-	}
-}
-
+/* 3. ID based style selector 1 which applies to the menu */
 .Header #menu {
 	float: right;
 	width: 44px;
@@ -89,58 +78,15 @@ a {
 	color: #400040 #400040;
 }
 
-@media only screen and (min-width: 768px) {
-	.Header #menu {
-		width: auto;
-		height: auto;
-		background: none;
-		cursor: auto;
-	}
-	.Header #menu ul {
-		position: static;
-		width: auto;
-		-webkit-transform: translateY(0);
-		-moz-transform: translateY(0);
-		-ms-transform: translateY(0);
-		-o-transform: translateY(0);
-		transform: translateY(0);
-		line-height: 70px;
-	}
-	.Header #menu ul.is-visible {
-		-webkit-transform: translateY(0);
-		-moz-transform: translateY(0);
-		-ms-transform: translateY(0);
-		-o-transform: translateY(0);
-		transform: translateY(0);
-	}
-	.Header #menu li {
-		display: inline-block;
-		margin-left: 1em;
-	}
-	.Header #menu a {
-		display: inline-block;
-		height: auto;
-		line-height: normal;
-		background: transparent;
-		padding: .6em 1em;
-		border-top: none;
-		color: #400040;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 14px;
-		font-size: 0.875rem;
-	}
-	.no-touch .Header #menu a:hover {
-		color: #400040;
-	}
-}
-
+/* 4. Class based style selector 2 which applies to the all the content
+in the body except header */
 .content {
 	height: 100%;
 	position: relative;
 	z-index: 1;
 }
 
+/* 5. Class based style selector 3 which applies to the content which has image in background */
 .Summary {
 	position: relative;
 	min-height: 100%;
@@ -150,6 +96,7 @@ a {
 	z-index: 1;
 }
 
+/* 6. Styling specific elements in the content with styles inherited from summary */
 .Summary h1 {
 	position: absolute;
 	left: 5%;
@@ -206,33 +153,30 @@ a {
 	color: #ff8000;
 }
 
+/* 7. Class based style selector 4 which applies background image to introduction
+and inherits style properties from summary */
 .Summary.picture {
 	background-image: url("img/image.jpg");
 }
 
+/* 8. Class based style selector 5 which applies to footer and inherits style properties from summary */
 .Summary.footer {
 	min-height: 10%;
 }
 
+/* 9. ID based style selector 2 which applies background image to education */
 #Education {
 	background-image:
 		url("http://upload.wikimedia.org/wikipedia/commons/2/26/UT_Dallas_main_mall.JPG");
 }
 
+/* 10. ID based style selector 3 which applies background image to awards */
 #Awards {
 	background-image:
 		url("http://s3.amazonaws.com/static.texastribune.org/media/images/TribAwards_png_800x1000_q100.png");
 }
 
-@media only screen and (min-width: 768px) {
-	.Summary h1 {
-		font-size: 36px;
-	}
-	.Summary p {
-		font-size: 26px;
-	}
-}
-
+/* 11. Class based style selector 6 which applies to content with no background */
 .no-background {
 	position: relative;
 	min-height: 50%;
@@ -242,12 +186,100 @@ a {
 	z-index: 2;
 }
 
+/* 12. Class based style selector 7 which applies style and inherits from style of 
+content with no background */
 .no-background.style1 {
 	background: rgba(255, 255, 255, 0.95);;
 	color: #400040;
 }
 
+/* 13. Class based style selector 7 which applies to article */
+.articles {
+	width: 90%;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+/* 14. ID based style selector 4 which applies to nested lists and inherits style from articles */
+.articles #nested, .articles dd {
+	margin-left: 5em;
+}
+
+/* 15. ID based style selector 5 which applies to HTML5 geolocation API button
+ and inherits style from articles */
+.articles #Form {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/* 16. ID based style selector 6 which applies to drag and drop API box */
+#div1 {
+	width: 270px;
+	height: 70px;
+	border: 1px solid #aaaaaa;
+}
+
+/* 17. Class based style selector 8 which applies to form elements */
+.Element {
+	border: inset 2px #EBE9ED;
+	margin-bottom: 10px;
+}
+
+/* 18. For responsive design, if a browser window is resized or web page is accessed from a
+mobile device or media with a low resolution */
 @media only screen and (min-width: 768px) {
+	.Header {
+		height: 70px;
+	}
+	.Header #menu {
+		width: auto;
+		height: auto;
+		background: none;
+		cursor: auto;
+	}
+	.Header #menu ul {
+		position: static;
+		width: auto;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		line-height: 70px;
+	}
+	.Header #menu ul.is-visible {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	.Header #menu li {
+		display: inline-block;
+		margin-left: 1em;
+	}
+	.Header #menu a {
+		display: inline-block;
+		height: auto;
+		line-height: normal;
+		background: transparent;
+		padding: .6em 1em;
+		border-top: none;
+		color: #400040;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+	.no-touch .Header #menu a:hover {
+		color: #400040;
+	}
+	.Summary h1 {
+		font-size: 36px;
+	}
+	.Summary p {
+		font-size: 26px;
+	}
 	.no-background {
 		padding: 4em 0;
 		font-size: 20px;
@@ -255,20 +287,4 @@ a {
 		line-height: 2;
 		font-weight: 300;
 	}
-}
-
-.articles #Form {
-	margin-top: 10px;
-	margin-left: 10px;
-}
-
-#div1 {
-	width: 270px;
-	height: 70px;
-	border: 1px solid #aaaaaa;
-}
-
-.Element {
-	border: inset 2px #EBE9ED;
-	margin-bottom: 10px;
 }

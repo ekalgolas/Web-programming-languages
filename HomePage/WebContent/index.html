@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- 4 meta tags -->
 <meta charset="UTF-8">
 <meta name="description" content="Personal Webpage of Ekal Golas">
 <meta name="author" content="Ekal Golas">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Link to icon on the window title -->
 <link rel="icon" href="img/UTD.ico" />
+
+<!-- Link to CSS file -->
 <link rel="stylesheet" href="firststyle.css" />
 
 <title>EKAL GOLAS</title>
 </head>
+
 <body>
+	<!-- HTML5 structural tag 1 -->
 	<header class="Header">
+		<!-- HTML5 structural tag 2 -->
 		<nav id="menu">
+			<!-- Unordered list -->
 			<ul>
 				<li><a href="#Home">Home</a></li>
 				<li><a href="#Courses">Courses taken</a></li>
@@ -25,18 +33,22 @@
 		</nav>
 	</header>
 
+	<!-- HTML5 structural tag 3 -->
 	<section class="content" id="Home">
+		<!-- HTML5 structural tag 4 -->
 		<article class="Summary picture">
 			<h1>Ekal Golas</h1>
 			<p>
-				Masters Student, Data Science <br> <a
-					href="http://cs.utdallas.edu/">Department of Computer Science</a><br>
+				Masters Student, Data Science <br>
+				<!-- Link to CS department web page -->
+				<a href="http://cs.utdallas.edu/">Department of Computer Science</a><br>
 				University of Texas at Dallas
 			</p>
 		</article>
 
 		<section class="no-background style1" id="Courses">
 			<article class="articles">
+				<!-- Ordered list -->
 				<ol>
 					<li>Spring 2015:
 						<ol id="nested">
@@ -58,6 +70,7 @@
 		</section>
 
 		<section class="Summary" id="Education">
+			<!-- Table with 3 rows and 3 columns -->
 			<table>
 				<tr>
 					<th>Institute</th>
@@ -79,6 +92,7 @@
 
 		<section class="no-background style1" id="Work">
 			<article class="articles">
+				<!-- Definition list -->
 				<dl>
 					<dt>University of Texas at Dallas (2014-Present)</dt>
 					<dd>Student Worker - Administration</dd>
@@ -103,40 +117,67 @@
 			<article class="articles">
 				<h2>Tell me about yourself:</h2>
 
+				<!-- HTML form -->
 				<form onsubmit="sendMail(); return false" method="post"
 					enctype="text/plain">
+					<!-- Radio button -->
 					Source: <input type="radio" name="Source" value="UTD" checked>
 					UTD Student/Faculty <input type="radio" name="Source" value="Other">
-					Other<br> <input type="checkbox" name="Contact" value="Yes" />
-					Please contact me<br> Name: <input type="text" id="name"
-						placeholder="Enter your name" class="Element" required><br>
+					Other<br>
+
+					<!-- Checkbox -->
+					<input type="checkbox" name="Contact" value="Yes" /> Please
+					contact me<br>
+
+					<!-- HTML5 input control 1 with required validation -->
+					Name: <input type="text" id="name" placeholder="Enter your name"
+						class="Element" required><br>
+
+					<!-- HTML5 input control 2, number with required validation-->
 					Age: <input type="number" id="age" min="1" max="100" step="1"
-						value="20" class="Element" required><br> Birthday: <input
-						type="date" id="bday" class="Element" required><br>
+						value="20" class="Element" required><br>
+
+					<!-- HTML5 input control 3, date with required validation -->
+					Birthday: <input type="date" id="bday" class="Element" required><br>
+
+					<!-- HTML5 input control 4 as range -->
 					Rate this site (Poor to Excellent): <input class="Element"
 						id="rating" type="range" min="1" max="10" step="1" /><br>
+
+					<!-- HTML5 input control 5, textarea with required validation -->
 					Message:
 					<textarea id="Message" rows="4" cols="25"
 						style="border: inset 2px #EBE9ED; height: 150px;" required></textarea>
 					<br>
+
+					<!-- HTML5 geolocation API -->
 					<button type="button" onclick="getLocation()" id="Form">Attach
 						your location</button>
 					<br>
+
+					<!-- HTML5 structural tag 5 -->
 					<aside>
+						<!-- HTML5 drag and drop API -->
 						Drag the UTD image to the box below to enable the send button:
 						<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 						<br> <img id="drag1" src="img/logo.png" draggable="true"
 							ondragstart="drag(event)" width="250" height="69">
 					</aside>
 					<button type="submit" id="Submit">Send</button>
+
+					<!-- Reset button -->
 					<button type="reset" id="Form">Reset</button>
 					<br>
+
+					<!-- Place for infomation from HTML5 storage API -->
 					<div id="result"></div>
 				</form>
 			</article>
 		</section>
 
+		<!-- HTML5 structural tag 6 -->
 		<footer class="Summary footer">
+			<!-- Image map with 3 areas -->
 			<img src="img/footer.png" width="90%" height="60" alt="Follow me"
 				usemap="#follow">
 
@@ -151,8 +192,11 @@
 		</footer>
 	</section>
 
+	<!-- Script for jQuery -->
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		
+	<!-- Script for form and HTML5 functions -->	
 	<script src="js/main.js"></script>
 </body>
 </html>
