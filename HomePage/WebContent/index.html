@@ -1,10 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
+<meta name="description" content="Personal Webpage of Ekal Golas">
+<meta name="author" content="Ekal Golas">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="img/UTD.ico" />
+<link rel="stylesheet" href="firststyle.css" />
+
 <title>EKAL GOLAS</title>
 </head>
 <body>
-Test Home Page
+	<header class="Header">
+		<nav id="menu">
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#Courses">Courses taken</a></li>
+				<li><a href="#Education">Education</a></li>
+				<li><a href="#Work">Work Experience</a></li>
+				<li><a href="#Awards">Certifications/Awards</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="content" id="Home">
+		<article class="Summary picture">
+			<h1>Ekal Golas</h1>
+			<p>
+				Masters Student, Data Science <br> <a
+					href="http://cs.utdallas.edu/">Department of Computer Science</a><br>
+				University of Texas at Dallas
+			</p>
+		</article>
+
+		<section class="no-background style1" id="Courses">
+			<article class="articles">
+				<ol>
+					<li>Spring 2015:
+						<ol id="nested">
+							<li>Web programming languages</li>
+							<li>Machine learning</li>
+							<li>Big data management and analytics</li>
+						</ol>
+					</li>
+					<li>Fall 2014:
+						<ol id="nested">
+							<li>Implementation of advanced data structures and
+								algorithms</li>
+							<li>Database design</li>
+							<li>Probability and statistics</li>
+						</ol>
+					</li>
+				</ol>
+			</article>
+		</section>
+
+		<section class="Summary" id="Education">
+			<table>
+				<tr>
+					<th>Institute</th>
+					<th>Degree</th>
+					<th>GPA</th>
+				</tr>
+				<tr>
+					<td>University of Texas at Dallas: 2014-2016 (Expected)</td>
+					<td>Masters in Computer Science</td>
+					<td>3.83/4.00</td>
+				</tr>
+				<tr>
+					<td>Guru Gobind Singh Indraprastha University: 2006-2010</td>
+					<td>B.Tech (Computer Science)</td>
+					<td>3.7/4.00</td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="no-background style1" id="Work">
+			<article class="articles">
+				<dl>
+					<dt>University of Texas at Dallas (2014-Present)</dt>
+					<dd>Student Worker - Administration</dd>
+					<dt>Intel Security (2011-2014)</dt>
+					<dd>Senior Quality Assurance Engineer - McAfee Labs</dd>
+					<dt>Infosys Technologies Ltd. (2010-2011)</dt>
+					<dd>Systems Engineer - Finacle</dd>
+				</dl>
+			</article>
+		</section>
+
+		<section class="Summary" id="Awards">
+			<ul style="font-size: 1.275rem; top: 30%">
+				<li>ISTQB Foundation Level Certified Tester (2012)</li>
+				<li>McAfee Bravo for automation of manual deployement of builds</li>
+				<li>Sun Certified Java Programmer (2009)</li>
+				<li>Second prize in C++ challenge (2009)</li>
+			</ul>
+		</section>
+
+		<section class="no-background style1" id="Contact">
+			<article class="articles">
+				<h2>Tell me about yourself:</h2>
+
+				<form onsubmit="sendMail(); return false" method="post"
+					enctype="text/plain">
+					Source: <input type="radio" name="Source" value="UTD" checked>
+					UTD Student/Faculty <input type="radio" name="Source" value="Other">
+					Other<br> <input type="checkbox" name="Contact" value="Yes" />
+					Please contact me<br> Name: <input type="text" id="name"
+						placeholder="Enter your name" class="Element" required><br>
+					Age: <input type="number" id="age" min="1" max="100" step="1"
+						value="20" class="Element" required><br> Birthday: <input
+						type="date" id="bday" class="Element" required><br>
+					Rate this site (Poor to Excellent): <input class="Element"
+						id="rating" type="range" min="1" max="10" step="1" /><br>
+					Message:
+					<textarea id="Message" rows="4" cols="25"
+						style="border: inset 2px #EBE9ED; height: 150px;" required></textarea>
+					<br>
+					<button type="button" onclick="getLocation()" id="Form">Attach
+						your location</button>
+					<br>
+					<aside>
+						Drag the UTD image to the box below to enable the send button:
+						<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> <img id="drag1" src="img/logo.png" draggable="true"
+							ondragstart="drag(event)" width="250" height="69">
+					</aside>
+					<button type="submit" id="Submit">Send</button>
+					<button type="reset" id="Form">Reset</button>
+					<br>
+					<div id="result"></div>
+				</form>
+			</article>
+		</section>
+
+		<footer class="Summary footer">
+			<img src="img/footer.png" width="90%" height="60" alt="Follow me"
+				usemap="#follow">
+
+			<map name="follow">
+				<area shape="rect" coords="0,0,400,60"
+					href="https://www.linkedin.com/in/ekalgolas" alt="LinkedIn">
+				<area shape="rect" coords="425,0,775,60"
+					href="https://www.facebook.com/ekal.golas" alt="Facebook">
+				<area shape="rect" coords="800,0,1200,60"
+					href="https://github.com/ekalgolas" alt="Github">
+			</map>
+		</footer>
+	</section>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,1 +1,274 @@
-@CHARSET "ISO-8859-1";
+html * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-size: 100%;
+	font-family: "Roboto", sans-serif;
+	color: #400040;
+	background-color: white;
+}
+
+body, html {
+	height: 100%;
+}
+
+a {
+	color: #400040;
+	text-decoration: none;
+}
+
+.articles {
+	width: 90%;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+.articles #nested, .articles dd {
+	margin-left: 5em;
+}
+
+.Header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+	.Header {
+		height: 70px;
+	}
+}
+
+.Header #menu {
+	float: right;
+	width: 44px;
+	height: 100%;
+	background: url("img/logo.png") no-repeat center center;
+	background-size: 50px 40px;
+	cursor: pointer;
+}
+
+.Header #menu ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.Header #menu ul.is-visible {
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+	transform: translateY(50px);
+}
+
+.Header #menu a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 5%;
+	background: #c0c0c0;
+	border-top: 1px solid #400040;
+	color: #400040 #400040;
+}
+
+@media only screen and (min-width: 768px) {
+	.Header #menu {
+		width: auto;
+		height: auto;
+		background: none;
+		cursor: auto;
+	}
+	.Header #menu ul {
+		position: static;
+		width: auto;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		line-height: 70px;
+	}
+	.Header #menu ul.is-visible {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	.Header #menu li {
+		display: inline-block;
+		margin-left: 1em;
+	}
+	.Header #menu a {
+		display: inline-block;
+		height: auto;
+		line-height: normal;
+		background: transparent;
+		padding: .6em 1em;
+		border-top: none;
+		color: #400040;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+	.no-touch .Header #menu a:hover {
+		color: #400040;
+	}
+}
+
+.content {
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.Summary {
+	position: relative;
+	min-height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	z-index: 1;
+}
+
+.Summary h1 {
+	position: absolute;
+	left: 5%;
+	top: 40%;
+	width: 90%;
+	max-width: 1170px;
+	text-align: left;
+	font-size: 1.975rem;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	color: #ff8000;
+}
+
+.Summary table {
+	position: absolute;
+	left: 3%;
+	top: 40%;
+	width: 90%;
+	max-width: 1170px;
+	text-align: left;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+}
+
+.Summary ul {
+	position: absolute;
+	left: 10%;
+	top: 40%;
+	width: 90%;
+	max-width: 1170px;
+	text-align: left;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	color: #400040;
+}
+
+.Summary table th {
+	font-size: 1.975rem;
+	padding-bottom: 1em;
+}
+
+.Summary table td {
+	font-size: 1.075rem;
+	padding-bottom: 0.5em;
+}
+
+.Summary p {
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	width: 90%;
+	max-width: 1170px;
+	text-align: left;
+	font-size: 1.875rem;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	color: #ff8000;
+}
+
+.Summary.picture {
+	background-image: url("img/image.jpg");
+}
+
+.Summary.footer {
+	min-height: 10%;
+}
+
+#Education {
+	background-image:
+		url("http://upload.wikimedia.org/wikipedia/commons/2/26/UT_Dallas_main_mall.JPG");
+}
+
+#Awards {
+	background-image:
+		url("http://s3.amazonaws.com/static.texastribune.org/media/images/TribAwards_png_800x1000_q100.png");
+}
+
+@media only screen and (min-width: 768px) {
+	.Summary h1 {
+		font-size: 36px;
+	}
+	.Summary p {
+		font-size: 26px;
+	}
+}
+
+.no-background {
+	position: relative;
+	min-height: 50%;
+	padding: 4em 0;
+	line-height: 1.6;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+
+.no-background.style1 {
+	background: rgba(255, 255, 255, 0.95);;
+	color: #400040;
+}
+
+@media only screen and (min-width: 768px) {
+	.no-background {
+		padding: 4em 0;
+		font-size: 20px;
+		font-size: 1.25rem;
+		line-height: 2;
+		font-weight: 300;
+	}
+}
+
+.articles #Form {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#div1 {
+	width: 270px;
+	height: 70px;
+	border: 1px solid #aaaaaa;
+}
+
+.Element {
+	border: inset 2px #EBE9ED;
+	margin-bottom: 10px;
+}
